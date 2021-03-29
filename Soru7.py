@@ -10,3 +10,9 @@
 # Kullanmanız gereken veri yapıları, bu veri yapilarinin nasil uygulamaya dokulecegi ve baskı hizmetini
 # etkin bir şekilde çalıştırmak için gerekli olacak algoritmalar hakkında yaklasik 10 cümle ile kısa bir paragraf yazın.
 # Seçimlerinizi çalışma süresi ve depolama boyutu açısından açıklayın. (Time & Space Complexity)
+
+
+# Burada FIFO mantigiyla bir algoritam yazmamiz gerekli. Cunku dosyasini ilk gonderenin cikitisinin ilk alinmasi lazim.
+# Bunu uygulamak icin bir stack uygulamasi gelistirmek lazim. Her ciktiya alinan dosyanin stackten silinmesi lazim.
+# Time complexity 1 cunku ilk elimize gelen dosyayi cagiriyoruz burda. Ama space complexity si fazla. Gonderilen datalar kadar yerimizin olmasi lazim.
+#

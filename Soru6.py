@@ -19,3 +19,22 @@
 # tum kod neticesinde terminalde gorunmesi gereken degerler:
 # hesapta yeterli bakiye yoktur
 # bakiye: 130
+
+from hesap import *
+
+operations = open('islemler.txt', 'w')
+
+for i in islemler:
+    if i['islem_tipi'] == 'para_yatirma':
+        bakiye += i['miktar']
+        operations.write(f"+{i['miktar']}\n")
+    elif i['islem_tipi'] == 'para_cekme':
+        if bakiye < i['miktar']:
+            print('Unsufficiant amount in the account')
+        else:
+            bakiye -= i['miktar']
+            operations.write(f"-{i['miktar']}\n")
+
+operations.write(f"bakiye:{bakiye}")
+
+print('bakiye', bakiye)
